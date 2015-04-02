@@ -13,4 +13,16 @@ public class Plateau
 	 * Nombre de colonne du plateau
 	 */
 	public final static int NB_COLONNE=7;
+	
+	private final int ligne;
+	private final int colonne;
+	
+	public Plateau()
+	{
+		this.ligne=NB_LIGNE;
+		this.colonne=NB_COLONNE;
+	}
+	
+	
+	
 }
