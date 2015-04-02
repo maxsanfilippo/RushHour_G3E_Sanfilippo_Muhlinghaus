@@ -6,21 +6,37 @@
 public class Plateau
 {
 	/**
+	 * Nombre de ligne du plateau par défaut
+	 */
+	public final static int NB_LIGNES=7;
+	/**
+	 * Nombre de colonne du plateau par défaut
+	 */
+	public final static int NB_COLONNES=7;
+	
+	/**
 	 * Nombre de ligne du plateau
 	 */
-	public final static int NB_LIGNE=7;
+	private final int nbLigne;
+	
 	/**
-	 * Nombre de colonne du plateau
+	 * Nombre de colonne du plateau 
 	 */
-	public final static int NB_COLONNE=7;
+	private final int nbColonne;
 	
-	private final int ligne;
-	private final int colonne;
+	/**
+	 * Tableau de cases
+	 */
+	private Case[][] cases;
 	
+	/**
+	 * Constructeur de nouveau Plateau avec les paramètres par défaut
+	 */	
 	public Plateau()
 	{
-		this.ligne=NB_LIGNE;
-		this.colonne=NB_COLONNE;
+		this.nbLigne=NB_LIGNES;
+		this.nbColonne=NB_COLONNES;
+		//TODO : faire une boucle pour initialiser le tableau : la graduation, les voitutres et 0
 	}
 	
 	

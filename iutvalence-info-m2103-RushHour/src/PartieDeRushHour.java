@@ -32,8 +32,8 @@ public class PartieDeRushHour
 	{
 		while (partieFinie=false)
 		{
-			//Voiture.selectionnerVoiture()
-			//TODO : gérer le déplacement : action du joueur
+			//Voiture.selectionnerVoiture(int ligne, int colonne)
+			//Voiture.deplacer(int ligne, int colonne)
 		}
 	}
 }
