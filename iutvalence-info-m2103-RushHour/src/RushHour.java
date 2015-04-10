@@ -4,7 +4,7 @@ public class RushHour
 
 	public static void main(String[] args)
 	{
-		new PartieDeRushHour().jouer();
+		new RushHourGame().play();
 	}
 
 }
