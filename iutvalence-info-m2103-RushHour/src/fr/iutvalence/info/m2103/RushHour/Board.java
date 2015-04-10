@@ -18,16 +18,6 @@ public class Board
 	public final static int COLUMNS_NUMBER=6;
 	
 	/**
-	 *  lines number of the board
-	 */
-	private final int linesNumber;
-	
-	/**
-	 * columns number oh the board
-	 */
-	private final int columnsNumber;
-	
-	/**
 	 * Array of boxes
 	 */
 	private Box[][] boxes;
@@ -37,8 +27,7 @@ public class Board
 	 */	
 	public Board()
 	{
-		this.linesNumber=LINES_NUMBER;
-		this.columnsNumber=COLUMNS_NUMBER;
+		this.boxes = new Box[LINES_NUMBER][COLUMNS_NUMBER];
 		//TODO : faire une boucle pour initialiser le tableau : les voitures
 	}
 	
