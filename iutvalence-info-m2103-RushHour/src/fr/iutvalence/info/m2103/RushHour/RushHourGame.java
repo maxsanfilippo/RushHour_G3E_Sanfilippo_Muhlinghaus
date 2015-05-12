@@ -15,12 +15,6 @@ public class RushHourGame
 	 */
 	private Board board;
 	
-	/**
-	 * Boolean means the state of the game : 
-	 * true : game is over
-	 * false : the game is running
-	 */
-	private boolean gameOver;	
 	
 	/**
 	 * Create a new game with a new board of boxes and a red car ( player's car ) placed
@@ -35,10 +29,13 @@ public class RushHourGame
 	 */
 	public void play()
 	{
-		while (gameOver=false)
-		{
+		
+		boolean gameOver = false;
+		//while (!gameOver)
+		//{
+			System.out.println(new Board());
 			//Car.selectCar(int ligne, int colonne)
 			//Voiture.deplacer(int ligne, int colonne)
-		}
+	//	}
 	}
 }
