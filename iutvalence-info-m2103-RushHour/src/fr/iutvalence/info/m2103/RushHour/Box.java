@@ -6,31 +6,36 @@ package fr.iutvalence.info.m2103.RushHour;
  */
 public class Box
 {
-	private boolean isVoid;
 	
-	public boolean isVoid()
+	private int pieceOfCar;
+	
+	public int getPieceOfCar()
 	{
-		return isVoid;
+		return pieceOfCar;
 	}
 
-	public void setVoid(boolean isVoid)
+	public void setPieceOfCar(int pieceOfCar)
 	{
-		this.isVoid = isVoid;
+		this.pieceOfCar = pieceOfCar;
 	}
 
-	public Box(boolean p_isVoid)
+	public Box(int p_pieceOfCar)
 	{
-		this.isVoid=p_isVoid;
+		this.pieceOfCar = p_pieceOfCar;
+		
 	}
 	
 	public String toString()
 	{
 		String theBox = "";
-		if (this.isVoid)
+		if (this.pieceOfCar == 0)
 			theBox += " O ";
+		else 
+			theBox += " V"+this.pieceOfCar;
 		return theBox;
 	}
 	//TODO:  bout de voiture dans la case , penser a deplacer les 2 
+	
 	
 	
 //	/**
