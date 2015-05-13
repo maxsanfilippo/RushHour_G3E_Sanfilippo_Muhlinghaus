@@ -31,11 +31,10 @@ public class RushHourGame
 	{
 		
 		boolean gameOver = false;
-		//while (!gameOver)
-		//{
-			System.out.println(new Board());
-			//Car.selectCar(int ligne, int colonne)
-			//Voiture.deplacer(int ligne, int colonne)
-	//	}
+		System.out.println(board);
+		board.move(1,2,0);
+		System.out.println(board);
+
+		
 	}
 }

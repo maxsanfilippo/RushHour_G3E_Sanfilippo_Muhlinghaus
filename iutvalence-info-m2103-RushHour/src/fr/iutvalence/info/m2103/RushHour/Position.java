@@ -2,7 +2,7 @@ package fr.iutvalence.info.m2103.RushHour;
 
 /**
  * The position of different composants of the game
- * @author sanfilma
+ * @author sanfilma muhlinge
  *
  */
 public class Position
@@ -19,13 +19,13 @@ public class Position
 	
 	/**
 	 * Create a new position with initializing line number and column number.
-	 * @param lineNumber the line number
-	 * @param columnNumber the column number
+	 * @param p_lineNumber the line number
+	 * @param p_columnNumber the column number
 	 */
-	public Position(int lineNumber, int columnNumber)
+	public Position(int p_lineNumber, int p_columnNumber)
 	{
-		this.lineNumber=lineNumber;
-		this.columnNumber=columnNumber;
+		this.lineNumber=p_lineNumber;
+		this.columnNumber=p_columnNumber;
 	}
 	
 	/**

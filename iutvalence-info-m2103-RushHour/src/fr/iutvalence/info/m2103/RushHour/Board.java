@@ -17,35 +17,26 @@ public class Board
 	 */
 	public final static int COLUMNS_NUMBER=6;
 	
+	
+	
 	/**
-	 * Array of boxes
+	 * Array of cars
 	 */
-	private Box[][] boxes;
+	private Car[] cars;
 	
 	/**
 	 * Create a new board with the good number of lines and columns.
 	 */	
 	public Board()
 	{
-		this.boxes = new Box[LINES_NUMBER][COLUMNS_NUMBER];
-		for (int lineNumber = 0; lineNumber < LINES_NUMBER; lineNumber++)
-			for (int columnNumber = 0; columnNumber < COLUMNS_NUMBER; columnNumber++)
-				this.boxes[lineNumber][columnNumber] = new Box(0);
-		boxes[2][3] = new Box(1);
-		boxes[2][4] = new Box(1);
-		boxes[4][5] = new Box(2);
-		boxes[5][5] = new Box(2);
-		
-//		for (int lineNumber = 0; lineNumber < LINES_NUMBER; lineNumber++)
-//			for (int columnNumber = 0; columnNumber < COLUMNS_NUMBER; columnNumber++)
-//				if (boxes[lineNumber][columnNumber].getPieceOfCar()==1)
-//					boxes[lineNumber][columnNumber].setPieceOfCar(0);
-//					boxes[lineNumber+1][columnNumber].setPieceOfCar(0);
-	}
 	
-	private Box getBox(int lineNumber, int columnNumber)
+		this.cars = new Car(0)
+		//TODO: initialiser tableau et ajouter des valeurs arbitraires, faire to string,
+	
+	}
+	public void move(int p_carNumber, int p_lineNumber, int p_columnNumber)
 	{
-		return this.boxes[lineNumber][columnNumber];
+		
 	}
 
 	
