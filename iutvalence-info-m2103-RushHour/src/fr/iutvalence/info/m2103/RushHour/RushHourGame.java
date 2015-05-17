@@ -1,5 +1,8 @@
 package fr.iutvalence.info.m2103.RushHour;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * This class represents a Rush Hour game : 
@@ -10,18 +13,21 @@ package fr.iutvalence.info.m2103.RushHour;
  */
 public class RushHourGame
 {
-	/**
-	 * The game board
-	 */
-	private Board board;
+	public final static int BOARD_WIDTH = 6;
+	public final static int BOARD_HEIGTH = 6;
 	
+	private List<Vehicle> vehicles;
+	private Vehicle playerVehicle;
 	
-	/**
-	 * Create a new game with a new board of boxes and a red car ( player's car ) placed
-	 */
 	public RushHourGame()
 	{
-		this.board = new Board();
+		this.vehicles = new ArrayList<Vehicle>();
+	}
+	
+	public boolean init()
+	{
+		vehicles.add(new PlayerCar(true, new Position(4,2)));
+		return true;
 	}
 	
 	/**
@@ -29,12 +35,15 @@ public class RushHourGame
 	 */
 	public void play()
 	{
-		
-		boolean gameOver = false;
-		System.out.println(board);
-		board.move(1,2,0);
-		System.out.println(board);
+		while(true) {
+			//TO DO : déplacement
+			
+			this.updateDisplay();
+		}
+	}
 
-		
+	private void updateDisplay() {
+		String[] affichage = new String[BOARD_HEIGTH];
+		// board
 	}
 }

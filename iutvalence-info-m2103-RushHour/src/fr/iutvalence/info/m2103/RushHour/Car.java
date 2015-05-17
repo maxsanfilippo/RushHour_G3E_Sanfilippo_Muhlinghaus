@@ -22,7 +22,7 @@ public class Car
 		String theCar = "";
 		if (this.number == 0)
 			theCar += " O ";
-		else 
+		else
 			theCar += " V"+this.number;
 		return theCar;
 	}
