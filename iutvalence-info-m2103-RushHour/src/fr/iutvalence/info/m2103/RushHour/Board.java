@@ -30,9 +30,7 @@ public class Board
 	public Board()
 	{
 	
-		this.cars = new Car(0)
-		//TODO: initialiser tableau et ajouter des valeurs arbitraires, faire to string,
-	
+
 	}
 	public void move(int p_carNumber, int p_lineNumber, int p_columnNumber)
 	{
@@ -46,7 +44,7 @@ public class Board
 		for (int lineNumber = 0; lineNumber < LINES_NUMBER; lineNumber++)
 		{
 			for (int columnNumber = 0; columnNumber < COLUMNS_NUMBER; columnNumber++)
-				theBoard += this.getBox(lineNumber,columnNumber);
+			//	theBoard += this.getBox(lineNumber,columnNumber);
 			theBoard += '\n';
 		}
 		return theBoard;
