@@ -2,8 +2,10 @@ package fr.iutvalence.info.m2103.RushHour;
 
 public class PlayerCar extends Vehicle {
 
-	public PlayerCar(boolean b, Position position) {
-		// TODO Auto-generated constructor stub
-	}
+	private static final String CAR_FRONT = "P";
+	private static final String CAR_REAR = "p";
 
+	public PlayerCar(boolean horizontalMovement, Position frontPosition) {
+		super(horizontalMovement);
+	}
 }

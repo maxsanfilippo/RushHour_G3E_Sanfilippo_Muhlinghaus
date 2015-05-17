@@ -1,48 +1,27 @@
 package fr.iutvalence.info.m2103.RushHour;
 
-/**
- * The position of different composants of the game
- * @author sanfilma muhlinge
- *
- */
-public class Position
-{
-	/**
-	 *  lines number of the board
-	 */
-	private int lineNumber;
 
-	/**
-	 * columns number oh the board
-	 */
-	private int columnNumber;
+public class Position {
+	private int x;
+	private int y;
 	
-	/**
-	 * Create a new position with initializing line number and column number.
-	 * @param p_lineNumber the line number
-	 * @param p_columnNumber the column number
-	 */
-	public Position(int p_lineNumber, int p_columnNumber)
-	{
-		this.lineNumber=p_lineNumber;
-		this.columnNumber=p_columnNumber;
+	public Position(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 	
-	/**
-	 * Getter of the line number
-	 * @return the line
-	 */
-	public int getLineNumber()
-	{
-		return lineNumber;
+
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
 	}
 	
-	/**
-	 * Getter of the column number
-	 * @return the column
-	 */
-	public int getColumnNumber()
-	{
-		return columnNumber;
+	public int getY() {
+		return y;
+	}
+	public void setY(int y) {
+		this.y = y;
 	}
 }
