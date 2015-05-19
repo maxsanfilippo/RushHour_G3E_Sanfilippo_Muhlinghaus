@@ -1,6 +1,7 @@
 package fr.iutvalence.info.m2103.RushHour;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -44,6 +45,33 @@ public class RushHourGame
 
 	private void updateDisplay() {
 		String[] affichage = new String[BOARD_HEIGTH];
-		// board
+		for(int i = 0; i<6; i++)
+			affichage[i] = "123456";
+		
+		for (Iterator<Vehicle> iterator = vehicles.iterator(); iterator.hasNext();) 
+		{
+			Vehicle vehicle = (Vehicle) iterator.next();
+			List<PieceOfVehicle> pieces = vehicle.getPieces();
+			for (Iterator<PieceOfVehicle> iterator = pieces.iterator(); iterator.hasNext();) 
+			{
+				PieceOfVehicle piece = (PieceOfVehicle) iterator.next();
+				
+				affichage[piece.getPosition().getY()].replace(Character.toChars(piece.getPosition().getX()), piece.toString());
+			}
+		}
+		
+		for(int i = 0; i<6; i++)
+		{
+			affichage[i].replace("1", "0");
+			affichage[i].replace("2", "0");
+			affichage[i].replace("3", "0");
+			affichage[i].replace("4", "0");
+			affichage[i].replace("5", "0");
+			affichage[i].replace("6", "0");
+		}
+		
+		for(int i = 0; i<6; i++)
+			System.out.println(affichage[i]);
 	}
+	
 }

@@ -1,30 +1,15 @@
 package fr.iutvalence.info.m2103.RushHour;
 
-public class Car
-{
-	private int number;
-	
-	private Position position1;
-	
-	private Position position2;
-	
-	public Car(int p_number, Position p_position1, Position p_position2)
-	{
-		this.number = p_number;
-		this.position1 = p_position1;
-		this.position2 = p_position2;
+
+public class Car extends Vehicle {
+
+	private static final String CAR_FRONT = "C";
+	private static final String CAR_REAR = "c";
+
+	public Car(boolean horizontalMovement, Position frontPosition) {
+		super(horizontalMovement);
+		
+		this.pieceList.add(new PieceOfVehicle(frontPosition, CAR_FRONT));
+		this.pieceList.add(new PieceOfVehicle(new Position(frontPosition, horizontalMovement, 1), CAR_REAR));
 	}
-	
-	
-	
-	public String toString()
-	{
-		String theCar = "";
-		if (this.number == 0)
-			theCar += " O ";
-		else
-			theCar += " V"+this.number;
-		return theCar;
-	}
-	
 }

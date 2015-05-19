@@ -7,5 +7,7 @@ public class PlayerCar extends Vehicle {
 
 	public PlayerCar(boolean horizontalMovement, Position frontPosition) {
 		super(horizontalMovement);
+		this.pieceList.add(new PieceOfVehicle(frontPosition, CAR_FRONT));
+		this.pieceList.add(new PieceOfVehicle(new Position(frontPosition, horizontalMovement, 1), CAR_REAR));
 	}
 }
