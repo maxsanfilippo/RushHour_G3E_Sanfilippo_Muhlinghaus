@@ -51,7 +51,7 @@ public class RushHourGame
 		for (Iterator<Vehicle> iterator = vehicles.iterator(); iterator.hasNext();) 
 		{
 			Vehicle vehicle = (Vehicle) iterator.next();
-			List<PieceOfVehicle> pieces = vehicle.getPieces();
+			List<PieceOfVehicle> pieces = vehicle.getPieceList();
 			for (Iterator<PieceOfVehicle> iterator = pieces.iterator(); iterator.hasNext();) 
 			{
 				PieceOfVehicle piece = (PieceOfVehicle) iterator.next();

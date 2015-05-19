@@ -5,6 +5,10 @@ import java.util.*;
 public class Vehicle 
 {
 	private List<PieceOfVehicle> pieceList;
+	
+	public List<PieceOfVehicle> getPieceList() {
+		return pieceList;
+	}
 	private boolean horizontalMovement;
 	
 	public Vehicle(boolean horizontalMovement)
@@ -22,4 +26,5 @@ public class Vehicle
 			// on déplace le véhicule en déplacant ses pièces
 		}
 	}
+
 }
