@@ -1,5 +1,9 @@
 package fr.iutvalence.info.m2103.RushHour;
 
+/**
+ * The player's car
+ * @author sanfilma muhlinge
+ */
 public class PlayerCar extends Vehicle {
 
 	private static final String CAR_FRONT = "P";

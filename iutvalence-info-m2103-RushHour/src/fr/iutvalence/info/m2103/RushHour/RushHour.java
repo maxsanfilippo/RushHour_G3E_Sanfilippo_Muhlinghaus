@@ -2,7 +2,7 @@ package fr.iutvalence.info.m2103.RushHour;
 
 
 /**
- * This is the application of the game
+ * the application of the game
  * @author sanfilma muhlinge
  */
 public class RushHour

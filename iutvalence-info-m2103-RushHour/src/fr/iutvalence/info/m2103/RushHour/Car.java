@@ -1,6 +1,10 @@
 package fr.iutvalence.info.m2103.RushHour;
 
 
+/**
+ * a car
+ * @author sanfilma
+ */
 public class Car extends Vehicle {
 
 	private static final String CAR_FRONT = "C";

@@ -1,5 +1,9 @@
 package fr.iutvalence.info.m2103.RushHour;
 
+/**
+ * component of vehicles
+ * @author sanfilma muhlinge
+ */
 public class PieceOfVehicle {
 
 	private Position position;
@@ -11,6 +15,11 @@ public class PieceOfVehicle {
 		this.appearance = appearance;
 	}
 	
+	/**
+	 * move the piece of the vehicle
+	 * @param forwardMovement forward of back movement
+	 * @param horizontalMovement horizontal or vertical movement
+	 */
 	public void move(boolean forwardMovement, boolean horizontalMovement) 
 	{
 		if(horizontalMovement)
