@@ -17,7 +17,8 @@ public class Position {
 	 * @param offset
 	 * Front position : position de la piece de tête du véhicule. A partir de ça et de l'orientation détermine la position des autre pièces. De fait, les véhicules verticaux auront tous la tête du même côté et pareil pour les horizontaux.
 	 */
-	public Position(Position frontPosition, boolean offsetIsHorizontal, int offset) {
+	public Position(Position frontPosition, boolean offsetIsHorizontal, int offset) 
+	{
 		this.x = frontPosition.getX();
 		this.y = frontPosition.getY();
 		
@@ -26,17 +27,24 @@ public class Position {
 		else	
 			this.y += offset;
 	}
-	public int getX() {
+	
+	public int getX() 
+	{
 		return x;
 	}
-	public void setX(int x) {
+	
+	public void setX(int x) 
+	{
 		this.x = x;
 	}
 	
-	public int getY() {
+	public int getY() 
+	{
 		return y;
 	}
-	public void setY(int y) {
+	
+	public void setY(int y) 
+	{
 		this.y = y;
 	}
 }

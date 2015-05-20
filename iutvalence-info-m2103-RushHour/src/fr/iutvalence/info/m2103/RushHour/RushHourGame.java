@@ -27,7 +27,7 @@ public class RushHourGame
 	
 	public boolean init()
 	{
-		vehicles.add(new PlayerCar(true, new Position(4,2)));
+		vehicles.add(new PlayerCar(true, new Position(1,3)));
 		return true;
 	}
 	
@@ -36,42 +36,44 @@ public class RushHourGame
 	 */
 	public void play()
 	{
-		while(true) {
-			//TO DO : déplacement
+		this.init();
 			
-			this.updateDisplay();
-		}
+		this.updateDisplay();
 	}
 
-	private void updateDisplay() {
+	private void updateDisplay() 
+	{
 		String[] affichage = new String[BOARD_HEIGTH];
-		for(int i = 0; i<6; i++)
-			affichage[i] = "123456";
+		for(int line = 0; line<BOARD_WIDTH; line++)
+			affichage[line] = "1 2 3 4 5 6";
 		
-		for (Iterator<Vehicle> iterator = vehicles.iterator(); iterator.hasNext();) 
+	    for (Iterator<Vehicle> iterator = vehicles.iterator(); iterator.hasNext();)
+        {
+                Vehicle vehicle = (Vehicle) iterator.next();
+                List<PieceOfVehicle> pieces = vehicle.getPieceList();
+                for (Iterator<PieceOfVehicle> iterator2 = pieces.iterator(); iterator2.hasNext();)
+                {
+                        PieceOfVehicle piece = (PieceOfVehicle) iterator2.next();
+                        
+                        affichage[piece.getPosition().getY()-1] = affichage[piece.getPosition().getY()-1].replace(Integer.toString(piece.getPosition().getX()).charAt(0), piece.toString().charAt(0));
+                }
+        }
+		
+		for(int line = 0; line<BOARD_WIDTH; line++)
 		{
-			Vehicle vehicle = (Vehicle) iterator.next();
-			List<PieceOfVehicle> pieces = vehicle.getPieceList();
-			for (Iterator<PieceOfVehicle> iterator = pieces.iterator(); iterator.hasNext();) 
-			{
-				PieceOfVehicle piece = (PieceOfVehicle) iterator.next();
-				
-				affichage[piece.getPosition().getY()].replace(Character.toChars(piece.getPosition().getX()), piece.toString());
-			}
+			affichage[line] = affichage[line].replace('1', '0');
+			affichage[line] = affichage[line].replace('2', '0');
+			affichage[line] = affichage[line].replace('3', '0');
+			affichage[line] = affichage[line].replace('4', '0');
+			affichage[line] = affichage[line].replace('5', '0');
+			affichage[line] = affichage[line].replace('6', '0');
+
 		}
 		
-		for(int i = 0; i<6; i++)
-		{
-			affichage[i].replace("1", "0");
-			affichage[i].replace("2", "0");
-			affichage[i].replace("3", "0");
-			affichage[i].replace("4", "0");
-			affichage[i].replace("5", "0");
-			affichage[i].replace("6", "0");
-		}
+		for(int line = 0; line<BOARD_WIDTH; line++)
+			System.out.println(affichage[line]);
 		
-		for(int i = 0; i<6; i++)
-			System.out.println(affichage[i]);
 	}
+
 	
 }

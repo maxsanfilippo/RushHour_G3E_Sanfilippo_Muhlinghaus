@@ -4,11 +4,9 @@ import java.util.*;
 
 public class Vehicle 
 {
-	private List<PieceOfVehicle> pieceList;
+	protected List<PieceOfVehicle> pieceList;
 	
-	public List<PieceOfVehicle> getPieceList() {
-		return pieceList;
-	}
+
 	private boolean horizontalMovement;
 	
 	public Vehicle(boolean horizontalMovement)
@@ -16,6 +14,12 @@ public class Vehicle
 		this.horizontalMovement = horizontalMovement;
 		this.pieceList = new ArrayList<PieceOfVehicle>();
 	}
+	
+	public List<PieceOfVehicle> getPieceList() 
+	{
+		return pieceList;
+	}
+	
 	public void go(boolean forwardMovement)
 	{
 		for (Iterator<PieceOfVehicle> iterator = pieceList.iterator(); iterator.hasNext();) 
